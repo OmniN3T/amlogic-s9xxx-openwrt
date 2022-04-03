@@ -38,8 +38,11 @@ svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/
 svn co https://github.com/hubutui/p7zip-lede/trunk package/p7zip
 
 # Edit theme Argon
-rm -rf package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+cd lede/package/lean  
+rm -rf luci-theme-argon  
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  
+make menuconfig #choose LUCI->Theme->Luci-theme-argon  
+make -j1 V=s  
 
 # Add luci-theme-atmaterial
 svn co https://github.com/Kinodi/luci-theme-atmaterial/trunk package/luci-theme-atmaterial
