@@ -41,8 +41,7 @@ svn co https://github.com/hubutui/p7zip-lede/trunk package/p7zip
 cd lede/package/lean  
 rm -rf luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git  
-make menuconfig #choose LUCI->Theme->Luci-theme-argon  
-make -j1 V=s  
+make menuconfig #choose LUCI->Theme->Luci-theme-argon
 
 # Add luci-theme-atmaterial
 svn co https://github.com/Kinodi/luci-theme-atmaterial/trunk package/luci-theme-atmaterial
@@ -64,9 +63,6 @@ svn co https://github.com/sirpdboy/luci-theme-opentopd/trunk package/luci-theme-
 
 # Add luci-theme-darkmatter
 svn co https://github.com/apollo-ng/luci-theme-darkmatter/trunk package/luci-theme-darkmatter
-
-# Add luci-theme-tano
-svn co https://github.com/tano-systems/luci-theme-tano/tree/master/src package/luci-theme-tano
 
 # Add luci-app-openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/openwrt-openclash
